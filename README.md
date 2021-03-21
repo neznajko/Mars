@@ -1,16 +1,16 @@
 ## Mars
 
-\[Yae\], this is my first proper, so to speak, Dijkstra Algorithm.
+*T h i s* is my first Dijkstra's Algorithm.
 We have a map of Mars Terrain represented as a 2D array, with each
-lmnt (vertex) being either CLEAR, ROUGH or ROCK SAMPLE terrain. The 
+coordinate being either CLEAR, ROUGH or ROCK SAMPLE terrain. The 
 upper left corner is the ***staat*** and the lower right is the 
 **finish**. We are given a bunch of robots, gathering rock samples,
 and are asked to program those units to gather as much samples as
 possible: [clck](https://ioinformatics.org/files/ioi1997problem1.pdf).
 
 It's easy to count the combinatorics, if we have an *nxn* map, the 
-length of path is *2(n-1)*, half of the directions being East, and 
-the other half South, than the number of all possible paths will be
+length of path is *2(n-1)*, half of the directions being East, 
+the other half South, and the number of all possible paths will be
 **C<sub>2(n-1)</sub><sup>n-1</sup>=[2(n-1)]!/[(n-1)!]<sup>2</sup>**.
 For *n=255* this number is:
 ```Python
@@ -25,13 +25,13 @@ For *n=255* this number is:
 ```
 We can think of terrain as vertices of a graph, and the
 Rock Samples as having links going to or from them with bigger
-weights. Then the problem is reduced to that how to find the 
-maximum length path, which is Dijkstra's Algorithm.
-So the first SCV will gather as much possible Rock Samples as
-SCV can gather from one go. Than using the *prev* link we can 
-backtrace and mark explored Rock Samples as Clear Terrain,
-than we can run the second SCV and so on until we are out of SCVs
-or Rock Samples. Here is the output from the Python program:
+weights. Thus the problem is reduced to that, how to find the 
+maximum length path, vhich is Dijkstra's Algorithm. So the first
+SCV will gather as much possible Rock Samples as SCV can gather
+from one go. Than using the *prev* link we can backtrace and mark
+explored Rock Samples as Clear Terrain, and than we let go the second
+SCV and so on until we are out of SCVs or Rock Samples. Here is the
+output from the Python program:
 ```Python
 [[0 2 0 0 0 2 0 0]  <- This is the map 
  [0 2 1 2 0 0 0 0]     0 - clear
