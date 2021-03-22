@@ -2,7 +2,7 @@
 
 *T h i s* is my first Dijkstra's Algorithm.
 We have a map of Mars Terrain represented as a 2D array, with each
-coordinate being either CLEAR, ROUGH or ROCK SAMPLE terrain. The 
+element being either CLEAR, ROUGH or ROCK SAMPLE terrain. The 
 upper left corner is the ***staat*** and the lower right is the 
 **finish**. We are given a bunch of robots, gathering rock samples,
 and are asked to program those units to gather as much samples as
@@ -87,7 +87,7 @@ Backtrace: (7,6), (7,5), (7,4), (7,3), (7,2), (6,2), [6,1], (6,0), (5,0), (4,0),
  [0 0 1 0 0 0 0 0]
  [0 0 0 1 0 0 0 1]
  [0 1 0 1 0 0 0 0]       If there are 6+ SCVs than we stop here, cos all 
- [0 0 0 0 0 0 0 0]       terrain has ben explored.
+ [0 0 0 0 0 0 0 0]       terrain has been explored.
  [0 1 0 0 0 0 1 0]
  [0 0 0 1 0 1 0 0]
  [0 1 0 0 0 0 0 0]]
